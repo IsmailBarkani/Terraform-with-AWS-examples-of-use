@@ -1,0 +1,4 @@
+#ignore all .tfvars file
+*.tfvars
+demo1/.terraform/plugins/windows_amd64/terraform-provider-aws_v2.62.0_x4.exe
+!/.gitignore
