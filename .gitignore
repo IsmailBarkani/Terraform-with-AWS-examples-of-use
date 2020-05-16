@@ -2,6 +2,7 @@
 *.tfvars
 demo1/.terraform/
 demo2/.terraform/
+demo3/.terraform/
 demo2/sskey
 demo2/sskey.pub
 .*
