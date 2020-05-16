@@ -9,19 +9,32 @@ resource "aws_instance" "server"{
     key_name="${aws_key_pair.mykey.key_name}"
     #Provisioner upload script.sh file
     provisioner "file"{
+        connection{
+        type="ssh"
+        host="${self.public_ip}"
+        user = "${var.AWS_INSTANCE_USERNAME}"
+        private_key= "${file("${var.PATH_TO_PRIVATE_KEY}")}"
+        agent = false
+    }
+
         source="script.sh"
         destination="/tmp/script.sh"
     }
+    
     #Provisioner to add permision and execute script file
     provisioner "remote-exec"{
+
+        connection{
+        type="ssh"
+        host="${self.public_ip}"
+        user = "${var.AWS_INSTANCE_USERNAME}"
+        private_key= "${file("${var.PATH_TO_PRIVATE_KEY}")}"
+        agent = false
+    }
         inline=[
-            "chmod +x /tmp/script.sh",
+            "chmod 644 /tmp/script.sh",
             "sudo /tmp/script.sh"
         ]
     }
-    connection{
-        host="${self.public_ip}"
-        user = "${var.AWS_INSTANCE_USERNAME}"
-        password= "${file("${var.PATH_TO_PRIVATE_KEY}")}"
-    }
+   
 }

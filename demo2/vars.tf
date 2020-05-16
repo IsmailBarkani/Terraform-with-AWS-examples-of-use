@@ -17,5 +17,5 @@ variable "PATH_TO_PRIVATE_KEY"{
     default="mykey"
 }
 variable "AWS_INSTANCE_USERNAME"{
-    default="ubuntu"
+    default="ec2-user"
 }
