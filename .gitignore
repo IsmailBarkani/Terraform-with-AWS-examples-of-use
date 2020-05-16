@@ -1,5 +1,7 @@
 #ignore all .tfvars file
 *.tfvars
 demo1/.terraform/
+demo2/.terraform/
 .*
+*.exe
 !/.gitignore
