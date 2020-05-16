@@ -10,12 +10,12 @@ variable "AMIS"{
         eu-south-1="ami-0ae82b98c54a93226"
     }
 }
-variable "PATH_TO_PUBLIC_KEY"{
-    default="mykey.pub"
-}
 variable "PATH_TO_PRIVATE_KEY"{
-    default="mykey"
+    default="sskey"
+}
+variable "PATH_TO_PUBLIC_KEY"{
+    default="sskey.pub"
 }
 variable "AWS_INSTANCE_USERNAME"{
-    default="ec2-user"
+    default="ubuntu"
 }

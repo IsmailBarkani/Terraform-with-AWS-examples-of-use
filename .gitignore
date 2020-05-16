@@ -2,8 +2,8 @@
 *.tfvars
 demo1/.terraform/
 demo2/.terraform/
-demo2/mykey
-demo2/mykey.pub
+demo2/sskey
+demo2/sskey.pub
 .*
 *.exe
 !/.gitignore
