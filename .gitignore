@@ -3,8 +3,8 @@
 demo1/.terraform/
 demo2/.terraform/
 demo3/.terraform/
-demo2/sskey
-demo2/sskey.pub
+demo2/ssh_keypair
+demo2/ssh_keypair.pub
 .*
 *.exe
 !/.gitignore
