@@ -9,3 +9,46 @@ resource "aws_vpc" "main" {
     name="main"
   }
 }
+
+#Subnets (public)
+resource "aws_subnet" "main-public-1"{
+  vpc_id="${aws_vpc.main.id}"
+  cidr_block="10.0.1.0/24"
+  map_public_ip_on_lunch="true"
+  availability_zone="eu-west-3a"
+  tags{
+    name="main-public-1"
+  }
+}
+
+resource "aws_subnet" "main-public-2"{
+  vpc_id="${aws_vpc.main.id}"
+  cidr_block="10.0.2.0/24"
+  map_public_id_on_lunch="true"
+  availability_region="eu-west-3b"
+  tags{
+    name="main-public-2"
+  }
+}
+
+#subnet private
+
+resource "aws_subnet" "main-private-3"{
+  vpc_id="${aws_vpc.main.id}"
+  cidr_block="10.0.3.0/24"
+  map_public_ip_on_lunch="false"
+  availability_region="eu-west-3a"
+  tags{
+    name="main-private-3"
+  }
+}
+
+resource "aws_subnet" "main-private-4"{
+  vpc_id="${aws_vpc.main.id}"
+  cidr_block="10.0.4.0/24"
+  map_public_ip_on_lunch="false"
+  availability_region="eu-west-3b"
+  tags{
+    name="main-private-4"
+  }
+}
