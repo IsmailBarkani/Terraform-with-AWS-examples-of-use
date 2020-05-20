@@ -12,6 +12,8 @@ resource "aws_instance" "server" {
   vpc_security_group_ids = ["${aws_security_group.groupe.id}"]
   #key pair name
   key_name = "${aws_key_pair.mykey.key_name}"
+  #user data
+  user_data = "${data.template_cloudinit_config.cloudinit_example.rendered}"
 }
 
 #add an extra EBS(elastic block sotrage) to the instance
@@ -28,5 +30,5 @@ resource "aws_ebs_volume" "ebs-volume-1" {
 resource "aws_volume_attachment" "ebs-volume-1-attachment" {
   device_name = "/dev/xvdh"
   volume_id   = "${aws_ebs_volume.ebs-volume-1.id}"
-  instance_id  = "${aws_instance.server.id}"
+  instance_id = "${aws_instance.server.id}"
 }
