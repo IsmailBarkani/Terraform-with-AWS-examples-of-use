@@ -11,10 +11,10 @@ variable "AMIS" {
   }
 }
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "ssh_keypair"
+  default = "mykey"
 }
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "ssh_keypair.pub"
+  default = "mykey.pub"
 }
 variable "AWS_INSTANCE_USERNAME" {
   default = "ubuntu"
