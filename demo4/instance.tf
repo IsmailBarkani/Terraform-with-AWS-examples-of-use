@@ -18,7 +18,7 @@ resource "aws_instance" "server" {
 
 #add an extra EBS(elastic block sotrage) to the instance
 resource "aws_ebs_volume" "ebs-volume-1" {
-  availability_zone = "eu-west-3"
+  availability_zone = "eu-west-3a"
   size              = "2"
   type              = "gp2" #SSD
   tags = {
