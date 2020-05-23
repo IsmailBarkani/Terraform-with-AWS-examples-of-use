@@ -10,6 +10,13 @@ variable "AMIS" {
     eu-south-1 = "ami-0ae82b98c54a93226"
   }
 }
+
+variable "ECS_AMIS" {
+  type = "map"
+  default = {
+    eu-west-3 = "ami-032a9f3e531acca53"
+  }
+}
 variable "PATH_TO_PRIVATE_KEY" {
   default = "mykey"
 }

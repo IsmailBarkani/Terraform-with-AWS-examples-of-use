@@ -1,3 +1,3 @@
-output "myapp-repository-url" {
-  value = "${aws_ecr_repository.myapp.repository_url}"
+output "elb" {
+  value = "${aws_elb.myaap_elb.dns_name}"
 }
