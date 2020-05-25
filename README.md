@@ -21,7 +21,7 @@ $ terraform init
 $ terraform apply
 ```
 
--**Authenticating Amazon ECR Repositories for Docker CLI**
+- **Authenticating Amazon ECR Repositories for Docker CLI**
 Use the commande above to retrieves the token
 ```
 $ aws ecr get-login
