@@ -7,6 +7,7 @@ demo4/.terraform/
 demo5/.terraform/
 demo6/.terraform/
 demo7/.terraform/
+demo8/.terraform/
 demo2/ssh_keypair
 demo2/ssh_keypair.pub
 demo4/mykey
