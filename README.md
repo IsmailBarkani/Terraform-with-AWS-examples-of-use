@@ -20,3 +20,14 @@ $ terraform init
 ```
 $ terraform apply
 ```
+
+-**Authenticating Amazon ECR Repositories for Docker CLI**
+Use the commande above to retrieves the token
+```
+$ aws ecr get-login
+```
+copy the token, in run the following commande
+
+```bash
+$ docker login  –p token –e none https://aws_account_id.dkr.ecr.your_region.amazonaws.com
+```
