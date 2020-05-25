@@ -1,17 +1,6 @@
 #ignore all .tfvars file
 *.tfvars
-demo1/.terraform/
-demo2/.terraform/
-demo3/.terraform/
-demo4/.terraform/
-demo5/.terraform/
-demo6/.terraform/
-demo7/.terraform/
-demo8/.terraform/
-demo2/ssh_keypair
-demo2/ssh_keypair.pub
-demo4/mykey
-demo4/mykey.pub
+/.terraform/
 .*
 *.exe
 !/.gitignore
