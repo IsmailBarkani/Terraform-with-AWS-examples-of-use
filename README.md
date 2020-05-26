@@ -25,7 +25,7 @@ $ terraform apply
 
 Use the commande above to retrieves the token
 ```
-$ aws ecr get-login
+$ aws ecr get-login-password
 ```
 copy the token, in run the following commande
 
