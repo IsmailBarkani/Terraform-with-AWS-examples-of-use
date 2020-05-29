@@ -19,3 +19,6 @@ variable "PATH_TO_PUBLIC_KEY" {
 variable "AWS_INSTANCE_USERNAME" {
   default = "ubuntu"
 }
+variable "PASSWORD" {
+  default = "rootroot"
+}
