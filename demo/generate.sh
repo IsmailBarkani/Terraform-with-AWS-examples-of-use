@@ -1,0 +1,1 @@
+ssh-keygen -C "ismail.barkani@um5s.net.ma" -f mykey -N ""

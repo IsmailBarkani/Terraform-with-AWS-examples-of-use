@@ -3,4 +3,6 @@
 /.terraform/
 .*
 *.exe
+*.tfstate
+*.tfstate.backup
 !/.gitignore
