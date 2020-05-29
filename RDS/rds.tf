@@ -41,6 +41,7 @@ resource "aws_db_instance" "mysql" {
             "sudo apt update",
             "echo Y | sudo apt-get install mysql-client",
             "mysql -u root -h ${aws_db_instance.mysql.address} -p${var.PASSWORD} mydb < /tmp/data.sql",
+            "exit",
             "exit"
       ]
     }
