@@ -19,3 +19,13 @@ variable "PATH_TO_PUBLIC_KEY" {
 variable "AWS_INSTANCE_USERNAME" {
   default = "ubuntu"
 }
+variable "PASSWORD" {
+  default = "rootroot"
+}
+
+variable "ECS_AMIS" {
+  type = "map"
+  default = {
+    eu-west-3 = "ami-032a9f3e531acca53"
+  }
+}

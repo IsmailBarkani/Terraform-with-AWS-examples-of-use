@@ -14,7 +14,7 @@ resource "aws_elb" "myaap_elb" {
   name = "myaap-elb"
 
   listener {
-    instance_port     = 3000
+    instance_port     = 8080
     instance_protocol = "http"
     lb_port           = 80
     lb_protocol       = "http"
@@ -50,7 +50,7 @@ resource "aws_ecs_service" "myapp-service" {
   load_balancer {
     elb_name       = "${aws_elb.myaap_elb.name}"
     container_name = "myapp"
-    container_port = 3000
+    container_port = 8080
   }
   lifecycle { ignore_changes = ["task_definition"] }
 

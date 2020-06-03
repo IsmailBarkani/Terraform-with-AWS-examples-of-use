@@ -90,17 +90,3 @@ resource "aws_route_table_association" "main-public-2-a" {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
