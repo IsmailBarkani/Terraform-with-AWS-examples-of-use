@@ -19,8 +19,11 @@ variable "PATH_TO_PUBLIC_KEY" {
 variable "AWS_INSTANCE_USERNAME" {
   default = "ubuntu"
 }
-variable "PASSWORD" {
+variable "DB_PASSWORD" {
   default = "rootroot"
+}
+variable "DB_USER" {
+  default = "root"
 }
 
 variable "ECS_AMIS" {
